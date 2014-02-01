@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Side Menu &ndash; Layout Examples &ndash; Pure</title>
+
+<link rel="stylesheet" href="css/layouts/pure-min.css">
+<link rel="stylesheet" href="css/layouts/side-menu.css">
+
+</head>
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="pure-menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <ul>
+            	<li class="head-of-menu">MENU</li>
+            	<li><a href="index.html"><i class="ion-speedometer"></i> Dashboard</a></li>
+                <li><a href="rezervace.html"><i class="ion-clock"></i> Rezervace</a></li>
+                <li><a href="zakaznici.html"><i class="ion-person-stalker"></i> Zákazníci</a></li>
+                <li><a href="kategorie.html"><i class="ion-ios7-box"></i> Kategorie</a></li>
+                <li><a href="polozky.html" class="active"><i class="ion-filing"></i> Položky</a></li>
+                <li><a href="clanky.html"><i class="ion-document-text"></i> Články</a></li>
+                <li><a href="realizace.html"><i class="ion-hammer"></i> Realizace</a></li>
+                <li><a href="administratori.html"><i class="ion-ios7-people"></i> Administrátoři</a></li>
+                <li class="menu-item-divided bottom"></li>
+                <li class="head-of-menu"><i class="ion-link"></i> ODKAZY</li>
+                <li class="out"><a href="#">Půjčovna MERCATOR</a></li>
+                <li class="out"><a href="#">Hlášení problému</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">   
+    	<div class="menu-second">
+    		<ul class="bread-cumb">
+    			<li><a href="index.html">Mercator CMS v1.3</a></li>
+    			<li><a href="rezervace.html">Správa rezervací</a></li>
+    			<li>Úprava rezervace</li>
+    		</ul>
+    		
+    		<ul class="user">
+    			<li><a href="#">Tomáš Náhlovský</a></li>
+    			<li><a href="#"><i class="ion-power"></i> Odhlásit se</a></li>
+    		</ul>
+    	</div>
+    	
+        <div class="header">
+            <h1><i class="ion-clock"></i> Úprava rezervace</h1>
+        </div>
+
+        <div class="content">
+        	<ul class="tabs">
+        		<li><a href="#tab1" class="active">Základní údaje</a></li>
+        		<li><a href="#tab2">Objednané položky</a></li>
+        	</ul>
+        	
+        	<div id="tab1">
+	            <form class="pure-form pure-form-aligned margined">
+				    <fieldset>
+				        <div class="pure-control-group">
+				            <label for="name">Jméno:</label>
+				            <input id="name" type="text" class="pure-input-2-3" placeholder="Jméno">
+				        </div>
+				        <div class="pure-control-group">
+				            <label for="surname">Příjmení:</label>
+				            <input id="surname" type="text" class="pure-input-2-3" placeholder="Příjmení">
+				        </div>
+							
+				        <div class="pure-control-group">
+				            <label for="email">Email:</label>
+				            <input id="email" type="email" class="pure-input-2-3" placeholder="Email">
+				        </div>
+					
+				        <div class="pure-control-group">
+				            <label for="phone">Telefon:</label>
+				            <input id="phone" type="text" class="pure-input-2-3" placeholder="Telefon">
+				        </div>
+					        
+				        <div class="pure-control-group">
+				            <label for="firma">Firma:</label>
+				            <input id="firma" type="text" class="pure-input-2-3" placeholder="Firma">
+				        </div>
+					        
+				        <div class="pure-control-group">
+				            <label for="status">Status rezervace:</label>
+				            <select id="status" class="pure-input-2-3" >
+					            <option>Nová</option>
+					            <option>Schválená</option>
+					            <option>Probíhající</option>
+					            <option>Vyřízená</option>
+					        </select>
+				        </div>
+				    </fieldset>
+				</form>
+        	</div>
+        		
+        	<div id="tab2">
+		        <table class="pure-table pure-table-horizontal">
+		        	<thead>
+		        		<tr>
+		        			<th>Položka</th>
+		        			<th>Od</th>
+		        			<th>Do</th>
+		        			<th>Počet ks</th>
+		        			<th>Cena za ks</th>
+		        			<th>Kauce</th>
+		        			<th>Odstranit</th>
+		        		</tr>
+		        	</thead>
+				       <tr>
+					       <td>
+					       	  <select id="product">
+						      	<option value="1" >Sekací kladivo TE 705</option>
+                                <option value="2" >Sekací kladivo TE 505</option>
+                                <option value="3" >Sekací kladivo TE 706-AVR</option>
+                                <option value="4" >Bourací kladivo HILTI TE 905-AVR</option>
+                                <option value="5" selected="selected">Bourací kladivo HILTI TE 1000-AVR</option>
+                                <option value="6" >Kladivo vrtací 2,6 kg HILTI TE 2-M</option>
+						     </select>
+						  </td>
+				          <td><input type="date" value="2014-01-21"></td>
+				          <td><input type="date" value="2014-01-21"></td>
+				          <td><input type="number" value="11"></td>
+				          <td><input type="text" value="610"></td>
+				          <td><input type="text" value="15000"></td>
+				          <td><a href="#" class="ion-close-round" title="Odstranit"></a></td>
+				      </tr>
+		       </table>
+        	</div>
+        	
+        	<ul class="buttons">
+        		<li><input type="submit" value="Uložit"></li>
+        		<li><a href="#">Zavřít</a></li>
+        	</ul>
+        	
+        	</div>
+			            
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/ui.js"></script>
+
+
+
+</body>
+</html>

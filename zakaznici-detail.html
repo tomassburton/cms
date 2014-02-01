@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>Side Menu &ndash; Layout Examples &ndash; Pure</title>
+
+<link rel="stylesheet" href="css/layouts/pure-min.css">
+<link rel="stylesheet" href="css/layouts/side-menu.css">
+
+</head>
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="pure-menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <ul>
+            	<li class="head-of-menu">MENU</li>
+            	<li><a href="index.html"><i class="ion-speedometer"></i> Dashboard</a></li>
+                <li><a href="rezervace.html"><i class="ion-clock"></i> Rezervace</a></li>
+                <li><a href="zakaznici.html"><i class="ion-person-stalker"></i> Zákazníci</a></li>
+                <li><a href="kategorie.html"><i class="ion-ios7-box"></i> Kategorie</a></li>
+                <li><a href="polozky.html" class="active"><i class="ion-filing"></i> Položky</a></li>
+                <li><a href="clanky.html"><i class="ion-document-text"></i> Články</a></li>
+                <li><a href="realizace.html"><i class="ion-hammer"></i> Realizace</a></li>
+                <li><a href="administratori.html"><i class="ion-ios7-people"></i> Administrátoři</a></li>
+                <li class="menu-item-divided bottom"></li>
+                <li class="head-of-menu"><i class="ion-link"></i> ODKAZY</li>
+                <li class="out"><a href="#">Půjčovna MERCATOR</a></li>
+                <li class="out"><a href="#">Hlášení problému</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">   
+    	<div class="menu-second">
+    		<ul class="bread-cumb">
+    			<li><a href="index.html">Mercator CMS v1.3</a></li>
+    			<li><a href="zakaznici.html">Správa zákazníků</a></li>
+    			<li>Detail zákazníka</li>
+    		</ul>
+    		
+    		<ul class="user">
+    			<li><a href="#">Tomáš Náhlovský</a></li>
+    			<li><a href="#"><i class="ion-power"></i> Odhlásit se</a></li>
+    		</ul>
+    	</div>
+    	
+        <div class="header">
+            <h1><i class="ion-person-stalker"></i> Detail zákazníka</h1>
+        </div>
+
+        <div class="content">
+        	<div class="pure-g-r">
+        		<div class="pure-u-2-5">
+        			<div class="inside">
+		        	<h2 class="content-subhead">Údaje o zákazníkovi</h2>
+		            <table class="pure-table pure-table-horizontal">
+				        <tr>
+				            <td>Jméno a příjmení</td>
+				            <td>Tomáš Náhlovský</td>
+				        </tr>
+				        <tr>
+				            <td>Druh zákazníka</td>
+				            <td>Soukromá osoba</td>
+				        </tr>
+				        <tr>
+				            <td>Ulice, č.p.</td>
+				            <td>U Parku 252</td>
+				        </tr>
+				        <tr>
+				            <td>Město</td>
+				            <td>Kralupy n. Vlt.</td>
+				        </tr>
+				        <tr>
+				            <td>PSČ</td>
+				            <td>278 01</td>
+				        </tr>
+				        <tr>
+				            <td>Telefon</td>
+				            <td>728631361</td>
+				        </tr>
+				        <tr>
+				            <td>Email</td>
+				            <td>tomas.nahlovsky@outlook.com</td>
+				        </tr>
+				        <tr>
+				            <td>Datum registrace</td>
+				            <td>15.01.2014</td>
+				        </tr>
+				        <tr>
+				            <td>Poslední přihlášení</td>
+				            <td>18.01.2014</td>
+				        </tr>
+				        <tr>
+				            <td>Firma</td>
+				            <td>-</td>
+				        </tr>
+				        <tr>
+				            <td>Web</td>
+				            <td>-</td>
+				        </tr>
+				        <tr>
+				            <td>IČO</td>
+				            <td>-</td>
+				        </tr>
+				        <tr>
+				            <td>DIČ</td>
+				            <td>-</td>
+				        </tr>
+				    </table>
+        			</div>
+        		</div>
+        		
+        		<div class="pure-u-3-5">
+        			<div class="inside">
+        			<h2 class="content-subhead">Přehled objednávek</h2>
+        				<table class="pure-table pure-table-horizontal">
+        					<thead>
+						        <tr>
+						            <th>Výpůjčka č.</th>
+						            <th>Datum</th>
+						            <th>Druhů položek</th>
+						            <th>Cena</th>
+						            <th>Status</th>
+						            <th>Faktura</th>
+						        </tr>
+						    </thead>
+						    
+        					<tr>
+					            <td>10</td>
+					            <td>30.01.2014</td>
+					            <td>1</td>
+					            <td>2610 Kč</td>
+					            <td><span class="run">Schválená</span></td>
+					            <td><a href="#" title="Detail faktury"><i class="ion-eye"></i></a></td>
+					        </tr>
+        				</table>
+        			</div>
+        		</div>
+        	</div>
+			
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/ui.js"></script>
+
+
+</body>
+</html>

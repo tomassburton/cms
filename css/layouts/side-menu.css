@@ -1,0 +1,503 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin-ext);
+@import url('ionicons.css');
+
+body {
+    color: #777;
+    font-family: 'Open Sans'!important;
+    font-weight: 300;
+}
+
+/*
+Add transition to containers so they can push in and out.
+*/
+#layout,
+#menu,
+.pure-menu-link {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/*
+This is the parent `<div>` that contains the menu and the content area.
+*/
+#layout {
+    padding-left: 190px; /* left col width "#menu" */
+    left: 0;
+}
+
+/*
+The content `<div>` is where all your content goes.
+*/
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 960px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+
+.header {
+     margin: 0;
+     color: #333;
+     padding: 0px 30px 0;
+     border-bottom: 1px solid #eee;
+ }
+    .header h1 {
+        margin: 0.2em 0;
+        font-size: 45px;
+        font-weight: 300;
+        display: inline-block;
+    }
+     .header h2 {
+        font-weight: 300;
+        color: #ccc;
+        padding: 0;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+.content-subhead {
+    margin: 50px 0 20px 0;
+    font-weight: 300;
+    color: #888;
+}
+
+/*
+The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
+appears on the left side of the page.
+
+By using the combination of `position: fixed; top: 0; bottom:0;`, we can make
+the menu have 100% height and be fixed on the page as the rest of it scrolls.
+*/
+#menu {
+    margin-left: -190px; /* this should be "#menu" width */
+    width: 190px;
+    position: fixed;
+    top: 0;
+    left: 190px; /* this should be "#menu" width */
+    bottom: 0;
+    z-index: 1; /* so the menu or its navicon stays above all content */
+    background: #2b2f3e;
+    overflow-y: auto;
+    -webkit-overflow-scroll: touch; /* for smooth scrolling on mobile */
+}
+    /*
+    All anchors inside the menu should be styled like this.
+    */
+    #menu a {
+        color: white;
+        border: none;
+        margin-left: 10px;
+    }
+    
+    #menu li.out a {
+	    margin:0px 15px;
+    }
+
+    /*
+    Remove all background/borders, since we are applying them to #menu.
+    */
+     #menu .pure-menu,
+     #menu .pure-menu ul {
+        border: none;
+        background: transparent;
+        font-size: 14px;
+        margin-top: 60px;
+    }
+    #menu ul li a { padding: 9px 20px!important; }
+    .head-of-menu {
+		padding-left: 30px;
+		font-size: 18px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+
+    /*
+    Add that light border to separate items into groups.
+    */
+    #menu .pure-menu .menu-item-divided {
+        border-top: 1px solid rgba(119, 119, 119, .3);
+    }
+    .bottom { margin-top: 40px; }
+        /*
+        Change color of the anchor links on hover/focus.
+        */
+        #menu .pure-menu li a:hover,
+        #menu .pure-menu li a:focus {
+            background: #27ccc0;
+            border-radius: 3px 0 0 3px;
+            -webkit-border-radius: 3px 0 0 3px;
+            -moz-border-radius: 3px 0 0 3px;
+            -o-border-radius: 3px 0 0 3px;
+            -ms-border-radius: 3px 0 0 3px;
+        }
+        #menu .pure-menu li.out a:hover,
+        #menu .pure-menu li.out a:focus {
+            background: rgb(85, 89, 101);
+            border-radius: 3px 3px 3px 3px;
+            -webkit-border-radius: 3px 3px 3px 3px;
+            -moz-border-radius: 3px 3px 3px 3px;
+            -o-border-radius: 3px 3px 3px 3px;
+            -ms-border-radius: 3px 3px 3px 3px;
+        }
+        #menu .pure-menu li a.active {
+	        background: white;
+	        color: rgb(43, 47, 62);
+	        border-radius: 3px 0 0 3px;
+	        -webkit-border-radius: 3px 0 0 3px;
+            -moz-border-radius: 3px 0 0 3px;
+            -o-border-radius: 3px 0 0 3px;
+            -ms-border-radius: 3px 0 0 3px;
+        }
+
+    /*
+    This styles the selected menu item `<li>`.
+    */
+    #menu .pure-menu-selected,
+    #menu .pure-menu-heading {
+        background: #1f8dd6;
+        line-height: 60px;
+    }
+        /*
+        This styles a link within a selected menu item `<li>`.
+        */
+        #menu .pure-menu-selected a {
+            color: #fff;
+        }
+
+    /*
+    This styles the menu heading.
+    */
+    #menu .pure-menu-heading {
+        font-size: 110%;
+        color: #fff;
+        margin: 0;
+    }
+
+.menu-second {
+	height: 70px;
+	line-height: 70px;
+	background: #2b2f3e;
+	color: white;
+	display: block;
+}
+	ul.user {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		font-size: 14px;
+		text-align: right;
+		padding-right: 30px;
+		float: right;
+		}
+	.user li{
+		display: inline-block;
+		margin-left: 10px;
+	}
+	.user li a {color: white; text-decoration: none; padding: 10px;}
+	.user li a:hover {
+		background: #ff3261;
+		padding: 10px;
+		border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-o-border-radius: 5px 5px 5px 5px;
+		-ms-border-radius: 5px 5px 5px 5px;
+	}
+	ul.bread-cumb {
+		list-style-type: none;
+		font-size: 13px;
+		margin: 0px 0px 0px 0px;
+		padding: 0px 12px 0px 12px;
+		float: left;
+		line-height: 40px;
+		margin-top: 15px;
+		border-radius: 5px 5px 5px 5px;
+		-webkit-border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px 5px 5px 5px;
+		-o-border-radius: 5px 5px 5px 5px;
+		-ms-border-radius: 5px 5px 5px 5px;
+		
+		background: rgba(85,89,101,1);
+	}
+	.bread-cumb li {
+		display: inline-block;
+		color: #919397;
+	}
+		.bread-cumb li a { color: #c3c3c3; text-decoration: none;}
+		.bread-cumb li a:hover { color: white; text-decoration: underline; }
+		.bread-cumb li:first-child:before { content: ""; padding: 0;}
+		.bread-cumb li:last-child { color: #919397; }
+		.bread-cumb li:before {
+			content: "\f154";
+			font-family: 'Ionicons';
+			font-size: 15px;
+			padding: 0px 8px;
+			color: #c3c3c3;
+		}
+
+/* -- Rezervace na HOMEPAGE --------------------------------------------------*/
+.new, .run, .running, .finished { color: white; height: 70px; font-family: 'Open Sans'; font-size: 14px; text-align: center; padding-top: 12px;}
+.count { font-weight: 600; font-size: 16px; padding-left: 5px; }
+
+.new { background: rgb(221, 81, 76); border-radius: 8px 0px 0px 8px; -webkit-border-radius: 8px 0px 0px 8px; -moz-border-radius: 8px 0px 0px 8px; -o-border-radius: 8px 0px 0px 8px; -ms-border-radius: 8px 0px 0px 8px; }
+.run { background: rgb(243, 123, 29); }
+.running { background: rgb(250, 210, 50); }
+.finished { background: rgb(94, 185, 94); border-radius: 0px 8px 8px 0px; -webkit-border-radius: 0px 8px 8px 0px; -moz-border-radius: 0px 8px 8px 0px; -o-border-radius: 0px 8px 8px 0px; -ms-border-radius: 0px 8px 8px 0px; }
+.new i, .run i, .running i, .finished i {
+	font-size: 30px;
+	display: block;
+}
+
+/* -- Rezervace tabulka ------------------------------------------------------*/
+table {	font-size: 13px; margin-top: 40px; width: 100%;}
+	th { font-weight: 600; background: rgb(238, 238, 238); color: rgb(51, 51, 51); text-align: center; }
+	td { text-align: center; }
+	td a i { color: rgb(136, 136, 136); font-size: 16px;} td a { color: rgb(136, 136, 136); text-decoration: none; font-weight: 400; }
+	td a:hover, td a:hover i { color: rgb(51, 51, 51); }
+td span.new { background: rgb(221, 81, 76); border-radius: 3px 3px 3px 3px; padding: 3px!important;}
+td span.run { background: rgb(243, 123, 29); border-radius: 3px 3px 3px 3px; padding: 3px!important;}
+td span.running { background: rgb(250, 210, 50); border-radius: 3px 3px 3px 3px; padding: 3px!important;}
+td span.finished { background: rgb(94, 185, 94); border-radius: 3px 3px 3px 3px; padding: 3px!important;}
+
+ul.paginator { list-style-type: none; width: 100%; text-align: center; padding: 0!important; margin-top: 30px;}
+	.paginator li { display: inline-block; }
+	.paginator li a { color: rgb(136, 136, 136); text-decoration: none; padding: 3px 8px; }
+	.paginator li a.active { background: rgba(136, 136, 136, 1); border-radius: 5px 5px 5px 5px; color: white; }
+	.paginator li a:hover {padding: 3px 8px; background: rgba(136, 136, 136, .6); color: white; border-radius: 5px 5px 5px 5px; }
+	
+.inside {padding: 10px;}
+.inside td:nth-child(2n+2) { font-weight: 600;}
+
+td ul { list-style-type: none; text-align: left; }
+	li i.ion-checkmark-circled { color: rgb(94, 185, 94); }
+	li i.ion-close-circled { color: rgb(221, 81, 76); }
+
+/* -- Kategorie --------------------------------------------------------------*/
+ol {font-size: 14px; margin: 0!important;}
+ol#cat {margin-top: 40px!important;}
+ol li {line-height: 32px; }
+ol li span:hover { text-decoration: underline; }
+ol li span { min-width: 220px; display: inline-block; }
+ol li a { text-decoration: none; font-size: 18px; color: rgb(51, 51, 51); padding: 4px 7px; }
+ol li a:hover {
+	padding: 4px 7px;
+	color: white;
+	border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+}
+ol li a:hover:nth-of-type(1) { background: cornflowerblue; }
+ol li a:hover:nth-of-type(2) { background: rgb(94, 185, 94); }
+ol li a:hover:last-of-type { background: rgb(221, 81, 76); }
+
+/* -- Položky ----------------------------------------------------------------*/
+.tabs {
+	margin-top: -1px;
+	list-style-type: none;
+	background: rgb(238, 238, 238);
+	display: table;
+	padding: 0!important;
+	border: 1px solid rgb(238, 238, 238);
+	width: 100%;
+	
+	border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-o-border-radius: 0px 0px 5px 5px;
+	-ms-border-radius: 0px 0px 5px 5px;
+	}
+	.tabs li { 
+		display: table-cell;
+		text-align: center;
+		width: auto;
+		float: none;
+	}
+	.tabs li a {
+		padding: 8px;
+		display: block;
+		text-decoration: none;
+		color: rgb(136, 136, 136);
+	}
+	.tabs li a:hover {text-decoration: underline; }
+	.tabs li a.active {
+		background: white;
+		text-decoration: underline;
+	}
+.margined { margin-top: 40px; }
+table.polozka th { font-weight: 600; background: rgb(238, 238, 238); color: rgb(51, 51, 51); text-align: left; }
+table.polozka td { text-align: left; }
+table.polozka td ul { padding: 0!important; }
+
+td input[type=text], td input[type=date], td input[type=number], td input[type=email], td select, td textarea { max-width: 130px; }
+input[type=text], input[type=date], input[type=number], input[type=email], input[type=file], select, textarea {
+	padding: .5em .6em;
+	display: inline-block;
+	border: 1px solid rgb(204, 204, 204);
+	font-size: 13px;
+	
+	font-family: 'Open Sans';
+	
+	box-shadow: none;
+	outline: 0;
+	border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+	
+	-webkit-transition: .3s linear border;
+	-moz-transition: .3s linear border;
+	-ms-transition: .3s linear border;
+	-o-transition: .3s linear border;
+	transition: .3s linear border;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+textarea { width: 633px!important; resize: none; }
+td input[type=number] { max-width: 60px; }
+input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, input[type=email]:focus, input[type=file]:focus, select:focus, textarea:focus {outline:0;outline:thin dotted \9;border-color:rgb(39, 204, 192);}
+.href { color: rgb(136, 136, 136);text-decoration: none;font-weight: 400; font-size: 13px; margin-left: 15px; }
+.href:hover { text-decoration: underline; color: rgb(221, 81, 76);}
+
+.buttons { list-style-type: none; padding:0px; display: table; text-align: center; float: right; }
+.buttons li { display: table-cell; text-align: center;}
+.buttons li input, .buttons li a {
+	padding: 8px 14px;
+	display: block;
+	text-decoration: none;
+	outline: none;
+	color: white;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px!important;
+	
+	border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+}
+.buttons li input {border:1px solid rgba(94, 185, 94, 1); background: rgba(94, 185, 94, .5); margin: 15px 10px 0px 0px;}
+.buttons li input:hover { background: rgba(94, 185, 94, 1); }
+.buttons li a {border:1px solid rgb(221, 81, 76);; background: rgba(221, 81, 76, .5);}
+.buttons li a:hover { background: rgb(221, 81, 76); }
+
+.add-button {
+	display: inline-block;
+	background: rgba(43, 47, 62, .5);
+	color: white;
+	padding: 10px;
+	font-size: 14px;
+	text-decoration: none;
+	position: absolute;
+	right: 30px;
+	top: 90px;
+	
+	border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-o-border-radius: 5px 5px 5px 5px;
+	-ms-border-radius: 5px 5px 5px 5px;
+}
+.add-button:hover { background: rgba(43, 47, 62, 1); }
+/* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+/*
+The button to open/close the Menu is custom-made and not part of Pure. Here's
+how it works:
+*/
+
+/*
+`.pure-menu-link` represents the responsive menu toggle that shows/hides on
+small screens.
+*/
+.pure-menu-link {
+    display: none; /* show this only on small screens */
+    top: 0;
+    left: 150px; /* `#menu`'s width */
+    background: #000;
+    font-size: 10px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 34px 24px;
+}
+
+    .pure-menu-link:hover,
+    .pure-menu-link:focus {
+        background: #000;
+    }
+
+    .pure-menu-link span {
+        position: relative;
+        display: block;
+    }
+
+    .pure-menu-link span,
+    .pure-menu-link span:before,
+    .pure-menu-link span:after {
+        background-color: #fff;
+        width: 100%;
+        height: 0.2em;
+    }
+
+        .pure-menu-link span:before,
+        .pure-menu-link span:after {
+            position: absolute;
+            margin-top: -0.6em;
+            content: " ";
+        }
+
+        .pure-menu-link span:after {
+            margin-top: 0.6em;
+        }
+
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/*
+Hides the menu at `767px`, but modify this based on your app's needs.
+*/
+@media (max-width: 767px) {
+
+    .header {
+        text-align: left;
+    }
+
+    /*
+    Navigation Push styles.
+    */
+    #layout {
+        position: relative;
+        padding-left: 0;
+    }
+        #layout.active {
+            position: relative;
+            left: 190px;
+        }
+            #layout.active #menu {
+                left: 190px;
+                width: 190px;
+            }
+
+    #menu {
+        left: 0;
+    }
+
+    .pure-menu-link {
+        position: fixed;
+        left: 0;
+        display: block; /* show the button on small screens */
+    }
+
+    #layout.active .pure-menu-link {
+        left: 190px;
+    }
+}
