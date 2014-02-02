@@ -1,3 +1,18 @@
+var $r = jQuery.noConflict();
+$r(document).ready(function() {
+	$(".modal").fancybox({
+		maxWidth	: 900,
+		maxHeight	: 800,
+		fitToView	: true,
+		width		: '80%',
+		height		: '80%',
+		autoSize	: true,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+
 (function (window, document) {
 
     var layout   = document.getElementById('layout'),
@@ -34,6 +49,7 @@
 
 }(this, this.document));
 
+var $ = jQuery.noConflict();
 $('ul.tabs').each(function(){
   var $active, $content, $links = $(this).find('a');
   $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
@@ -57,3 +73,4 @@ $('ul.tabs').each(function(){
     e.preventDefault();
   });
 });
+

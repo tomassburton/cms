@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin-ext);
 @import url('ionicons.css');
+@import url('jquery.fancybox.css');
 
 body {
     color: #777;
@@ -407,6 +408,50 @@ input[type=text]:focus, input[type=date]:focus, input[type=number]:focus, input[
 	-ms-border-radius: 5px 5px 5px 5px;
 }
 .add-button:hover { background: rgba(43, 47, 62, 1); }
+
+/* -- Práva u adminů ---------------------------------------------------------*/
+#privilegia { list-style-type: none; padding: 0; margin-top: 20px!important; }
+#privilegia li {
+	font-size: 14px;
+	line-height: 32px;
+	padding-left: 30px;
+}
+	li.head-of {
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 400;
+		padding-left: 0!important;
+		margin-bottom: -5px;
+	}
+	li.head-of { margin-top: 15px; }
+	li.head-of:first-of-type { margin-top: none; }
+	
+a.check-all, a.discheck {
+	display: inline-block;
+	background: rgba(43, 47, 62, 0.3);
+	color: rgb(255, 255, 255);
+	padding: 7px;
+	font-size: 14px;
+	text-decoration: none;
+	margin-top: 30px;
+}
+a.check-all:hover, a.discheck:hover { background: rgba(43, 47, 62, 0.6); }
+	a.check-all {
+		border-radius: 5px 0px 0px 5px;
+		-webkit-border-radius: 5px 0px 0px 5px;
+		-moz-border-radius: 5px 0px 0px 5px;
+		-o-border-radius: 5px 0px 0px 5px;
+		-ms-border-radius: 5px 0px 0px 5px;
+	}
+	a.discheck {
+		margin-left: -3px;
+		border-radius: 0px 5px 5px 0px;
+		-webkit-border-radius: 0px 5px 5px 0px;
+		-moz-border-radius: 0px 5px 5px 0px;
+		-o-border-radius: 0px 5px 5px 0px;
+		-ms-border-radius: 0px 5px 5px 0px;
+	}
+
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 
 /*

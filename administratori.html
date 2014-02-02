@@ -28,14 +28,14 @@
                 <li><a href="rezervace.html"><i class="ion-clock"></i> Rezervace</a></li>
                 <li><a href="zakaznici.html"><i class="ion-person-stalker"></i> Zákazníci</a></li>
                 <li><a href="kategorie.html"><i class="ion-ios7-box"></i> Kategorie</a></li>
-                <li><a href="polozky.html" class="active"><i class="ion-filing"></i> Položky</a></li>
+                <li><a href="polozky.html"><i class="ion-filing"></i> Položky</a></li>
                 <li><a href="clanky.html"><i class="ion-document-text"></i> Články</a></li>
                 <li><a href="realizace.html"><i class="ion-hammer"></i> Realizace</a></li>
-                <li><a href="administratori.html"><i class="ion-ios7-people"></i> Administrátoři</a></li>
+                <li><a href="administratori.html" class="active"><i class="ion-ios7-people"></i> Administrátoři</a></li>
                 <li class="menu-item-divided bottom"></li>
                 <li class="head-of-menu"><i class="ion-link"></i> ODKAZY</li>
                 <li class="out"><a href="#">Půjčovna MERCATOR</a></li>
-                <li class="out"><a href="#">Hlášení problému</a></li>
+                <li class="out"><a href="#error" class="modal">Hlášení problému</a></li>
             </ul>
         </div>
     </div>
@@ -85,7 +85,7 @@
 			            <td>Ano</td>
 			            <td><a href="#">Zneaktivnit</a></td>
 			            <td><a href="admin-detail.html" title="Detail"><i class="ion-eye"></i></a></td>
-			            <td><a href="#" title="Upravit"><i class="ion-compose"></i></a></td>
+			            <td><a href="admin-edit.html" title="Upravit"><i class="ion-compose"></i></a></td>
 			            <td><a href="#" title="Odstranit"><i class="ion-close-round"></i></a></td>			            
 			        </tr>
 			
@@ -98,7 +98,7 @@
 			            <td>Ano</td>
 			            <td><a href="#">Zneaktivnit</a></td>
 			            <td><a href="admin-detail.html" title="Detail"><i class="ion-eye"></i></a></td>
-			            <td><a href="#" title="Upravit"><i class="ion-compose"></i></a></td>
+			            <td><a href="admin-edit.html" title="Upravit"><i class="ion-compose"></i></a></td>
 			            <td><a href="#" title="Odstranit"><i class="ion-close-round"></i></a></td>			            
 			        </tr>
 			        
@@ -111,7 +111,7 @@
 			            <td>Ano</td>
 			            <td><a href="#">Zneaktivnit</a></td>
 			            <td><a href="admin-detail.html" title="Detail"><i class="ion-eye"></i></a></td>
-			            <td><a href="#" title="Upravit"><i class="ion-compose"></i></a></td>
+			            <td><a href="admin-edit.html" title="Upravit"><i class="ion-compose"></i></a></td>
 			            <td><a href="#" title="Odstranit"><i class="ion-close-round"></i></a></td>			            
 			        </tr>
 
@@ -122,10 +122,27 @@
     </div>
 </div>
 
+        <div style="display:none">
+        	<div id="error" class="clearfix window"><a href="javascript:$.fancybox.close();" class="close"><i class="ion-close"></i></a>
+        		<h2 class="content-subhead"><i class="ion-bug"></i> Nahlášení problému</h2>
+        		<form class="pure-form pure-form-aligned">
+				    <fieldset>
+				        	<label for="subject">Předmět problému:</label>
+				            <input id="subject" type="text" placeholder="Předmět">
+				            
+				        	<label for="specifikace">Specifikace problému:</label>
+				        	<textarea placeholder="Specifikace problému"></textarea>
+				    </fieldset>
+				    <ul class="buttons">
+		        		<li><input type="submit" value="Odeslat"></li>
+		        	</ul>
+				</form>
+        	</div>
+        </div>
 
 
-
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/fancybox.js"></script>
 <script src="js/ui.js"></script>
 
 

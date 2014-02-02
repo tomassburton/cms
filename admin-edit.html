@@ -25,13 +25,13 @@
             <ul>
             	<li class="head-of-menu">MENU</li>
             	<li><a href="index.html"><i class="ion-speedometer"></i> Dashboard</a></li>
-                <li><a href="rezervace.html" class="active"><i class="ion-clock"></i> Rezervace</a></li>
+                <li><a href="rezervace.html"><i class="ion-clock"></i> Rezervace</a></li>
                 <li><a href="zakaznici.html"><i class="ion-person-stalker"></i> Zákazníci</a></li>
                 <li><a href="kategorie.html"><i class="ion-ios7-box"></i> Kategorie</a></li>
                 <li><a href="polozky.html"><i class="ion-filing"></i> Položky</a></li>
                 <li><a href="clanky.html"><i class="ion-document-text"></i> Články</a></li>
                 <li><a href="realizace.html"><i class="ion-hammer"></i> Realizace</a></li>
-                <li><a href="administratori.html"><i class="ion-ios7-people"></i> Administrátoři</a></li>
+                <li><a href="administratori.html" class="active"><i class="ion-ios7-people"></i> Administrátoři</a></li>
                 <li class="menu-item-divided bottom"></li>
                 <li class="head-of-menu"><i class="ion-link"></i> ODKAZY</li>
                 <li class="out"><a href="#">Půjčovna MERCATOR</a></li>
@@ -44,8 +44,8 @@
     	<div class="menu-second">
     		<ul class="bread-cumb">
     			<li><a href="index.html">Mercator CMS v1.3</a></li>
-    			<li><a href="rezervace.html">Správa rezervací</a></li>
-    			<li>Úprava rezervace</li>
+    			<li><a href="administratori.html">Správa administrátorů</a></li>
+    			<li>Úprava administrátora</li>
     		</ul>
     		
     		<ul class="user">
@@ -55,13 +55,13 @@
     	</div>
     	
         <div class="header">
-            <h1><i class="ion-clock"></i> Úprava rezervace</h1>
+            <h1><i class="ion-ios7-people"></i> Úprava administrátora</h1>
         </div>
 
         <div class="content">
         	<ul class="tabs">
         		<li><a href="#tab1" class="active">Základní údaje</a></li>
-        		<li><a href="#tab2">Objednané položky</a></li>
+        		<li><a href="#tab2">Nastavení práv</a></li>
         	</ul>
         	
         	<div id="tab1">
@@ -87,55 +87,65 @@
 				        </div>
 					        
 				        <div class="pure-control-group">
-				            <label for="firma">Firma:</label>
-				            <input id="firma" type="text" class="pure-input-2-3" placeholder="Firma">
-				        </div>
-					        
-				        <div class="pure-control-group">
-				            <label for="status">Status rezervace:</label>
-				            <select id="status" class="pure-input-2-3" >
-					            <option>Nová</option>
-					            <option>Schválená</option>
-					            <option>Probíhající</option>
-					            <option>Vyřízená</option>
-					        </select>
+				            <label for="active">Aktivní:</label>
+				            <input id="active" type="checkbox" class="pure-input-2-3" checked="">
 				        </div>
 				    </fieldset>
 				</form>
         	</div>
         		
         	<div id="tab2">
-		        <table class="pure-table pure-table-horizontal">
-		        	<thead>
-		        		<tr>
-		        			<th>Položka</th>
-		        			<th>Od</th>
-		        			<th>Do</th>
-		        			<th>Počet ks</th>
-		        			<th>Cena za ks</th>
-		        			<th>Kauce</th>
-		        			<th>Odstranit</th>
-		        		</tr>
-		        	</thead>
-				       <tr>
-					       <td>
-					       	  <select id="product">
-						      	<option value="1" >Sekací kladivo TE 705</option>
-                                <option value="2" >Sekací kladivo TE 505</option>
-                                <option value="3" >Sekací kladivo TE 706-AVR</option>
-                                <option value="4" >Bourací kladivo HILTI TE 905-AVR</option>
-                                <option value="5" selected="selected">Bourací kladivo HILTI TE 1000-AVR</option>
-                                <option value="6" >Kladivo vrtací 2,6 kg HILTI TE 2-M</option>
-						     </select>
-						  </td>
-				          <td><input type="date" value="2014-01-21"></td>
-				          <td><input type="date" value="2014-01-21"></td>
-				          <td><input type="number" value="11"></td>
-				          <td><input type="text" value="610"></td>
-				          <td><input type="text" value="15000"></td>
-				          <td><a href="#" class="ion-close-round" title="Odstranit"></a></td>
-				      </tr>
-		       </table>
+        		<a href="" class="check-all"><i class="ion-ios7-checkmark"></i> Označit vše</a>
+        		<a href="" class="discheck"><i class="ion-ios7-close"></i> Odznačit vše</a>
+		        <ul id="privilegia">
+		        	<li class="head-of">Administrátoři</li>
+		        	<li><input type="checkbox" checked=""> Přidávání administrátorů</li>
+					<li><input type="checkbox" checked=""> Úprava administrátorů</li>
+					<li><input type="checkbox" checked=""> Zobrazení administrátorů</li>
+					<li><input type="checkbox" checked=""> Mazání administrátora</li>
+					<li><input type="checkbox" checked=""> Aktivace administrátora</li>
+					<li><input type="checkbox" checked=""> Deaktivace administrátora</li>
+					<li><input type="checkbox" checked=""> Zobrazení administrátora</li>
+					<li><input type="checkbox" checked=""> Změna hesla</li>
+					<li class="head-of">Zákazníci</li>
+					<li><input type="checkbox"> Deaktivace zákazníka</li>
+					<li><input type="checkbox"> Aktivace zákazníka</li>
+					<li><input type="checkbox"> Mazání zákazníků</li>
+					<li><input type="checkbox"> Zobrazení zákazníka</li>
+					<li><input type="checkbox"> Zobrazení zákazníků</li>
+					<li class="head-of">Rezervace</li>
+					<li><input type="checkbox"> Úprava rezervací</li>
+					<li><input type="checkbox"> Změny stavu rezervací</li>
+					<li><input type="checkbox"> Mazání rezervací</li>
+					<li><input type="checkbox"> Zobrazení faktur</li>
+					<li><input type="checkbox"> Zobrazení rezervací</li>
+					<li class="head-of">Články</li>
+					<li><input type="checkbox"> Mazání dokumentů</li>
+					<li><input type="checkbox"> Přidávání dokumentů</li>
+					<li><input type="checkbox"> Úprava dokumentů</li>
+					<li><input type="checkbox"> Zobrazení dokumentů</li>
+					<li><input type="checkbox"> Mazání obrázku dokumentů</li>
+					<li class="head-of">Kategorie</li>
+					<li><input type="checkbox"> Mazání kategorií</li>
+					<li><input type="checkbox"> Upravování kategorií</li>
+					<li><input type="checkbox"> Přidávání kategorií</li>
+					<li><input type="checkbox"> Zobrazení kategorií</li>
+					<li class="head-of">Realizace</li>
+					<li><input type="checkbox"> Správa realizací</li>
+					<li><input type="checkbox"> Přidávání realizací</li>
+					<li><input type="checkbox"> Úpravování realizací</li>
+					<li><input type="checkbox"> Mazání realizací</li>
+					<li><input type="checkbox"> Mazání obrázku realizací</li>
+					<li class="head-of">Realizace</li>
+					<li><input type="checkbox"> Přidávání položek</li>
+					<li><input type="checkbox"> Zobrazení položek</li>
+					<li><input type="checkbox"> Úprava položek</li>
+					<li><input type="checkbox"> Mazání položek</li>
+					<li><input type="checkbox"> Zobrazení položek</li>
+					<li><input type="checkbox"> Zobrazování položek v půjčovně</li>
+					<li><input type="checkbox"> Skrývání položek v půjčovně</li>
+					<li><input type="checkbox"> Mazání obrázku položek</li>
+		        </ul>
         	</div>
         	
         	<ul class="buttons">

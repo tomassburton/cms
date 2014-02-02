@@ -35,7 +35,7 @@
                 <li class="menu-item-divided bottom"></li>
                 <li class="head-of-menu"><i class="ion-link"></i> ODKAZY</li>
                 <li class="out"><a href="#">Půjčovna MERCATOR</a></li>
-                <li class="out"><a href="#">Hlášení problému</a></li>
+                <li class="out"><a href="#error" class="modal">Hlášení problému</a></li>
             </ul>
         </div>
     </div>
@@ -177,11 +177,27 @@
     </div>
 </div>
 
+        <div style="display:none">
+        	<div id="error" class="clearfix window"><a href="javascript:$.fancybox.close();" class="close"><i class="ion-close"></i></a>
+        		<h2 class="content-subhead"><i class="ion-bug"></i> Nahlášení problému</h2>
+        		<form class="pure-form pure-form-aligned">
+				    <fieldset>
+				        	<label for="subject">Předmět problému:</label>
+				            <input id="subject" type="text" placeholder="Předmět">
+				            
+				        	<label for="specifikace">Specifikace problému:</label>
+				        	<textarea placeholder="Specifikace problému"></textarea>
+				    </fieldset>
+				    <ul class="buttons">
+		        		<li><input type="submit" value="Odeslat"></li>
+		        	</ul>
+				</form>
+        	</div>
+        </div>
 
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="js/icheck.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/fancybox.js"></script>
 <script src="js/ui.js"></script>
 
 
