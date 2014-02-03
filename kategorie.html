@@ -63,61 +63,61 @@
 				<li><span>Půjčovna MERCATOR</span>
 					<a href="" class="ion-compose" title="Upravit"></a>
 					<a href="" class="ion-plus-round" title="Přidat podkategorii"></a>
-					<a href="" class="ion-ios7-trash" title="Odstranit"></a>
+					<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 					<ol>
 						<li><span>Příslušenství</span>
 							<a href="" class="ion-compose" title="Upravit"></a>
 							<a href="" class="ion-plus-round" title="Přidat podkategorii"></a>
-							<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>
+							<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 						<li><span>Kladiva</span>
 							<a href="" class="ion-compose" title="Upravit"></a>
 							<a href="" class="ion-plus-round" title="Přidat podkategorii"></a>
-							<a href="" class="ion-ios7-trash" title="Odstranit"></a>
+							<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 							<ol>
 								<li><span>Bourací kladiva</span>
 									<a href="" class="ion-compose" title="Upravit"></a>
-									<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>  
+									<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 								<li><span>Sekací kladiva</span>
 									<a href="" class="ion-compose" title="Upravit"></a>
-									<a href="" class="ion-ios7-trash" title="Odstranit"></a></li> 
+									<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 								<li><span>Kombinovaná kladiva</span>
 									<a href="" class="ion-compose" title="Upravit"></a>
-									<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>  
+									<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 								<li><span>Vrtací kladiva</span>
 									<a href="" class="ion-compose" title="Upravit"></a>
-									<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>
+									<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 							</ol>
 						</li>
 						<li><span>Pily</span>
 							<a href="" class="ion-compose" title="Upravit"></a>
 							<a href="" class="ion-plus-round" title="Přidat podkategorii"></a>
-							<a href="" class="ion-ios7-trash" title="Odstranit"></a>
+							<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 							<ol>
 								<li><span>Ruční pily</span>
 									<a href="" class="ion-compose" title="Upravit"></a>
-									<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>  
+									<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 								<li><span>Přímočaré pily</span>
 									<a href="" class="ion-compose" title="Upravit"></a>
-									<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>  
+									<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 								<li><span>Kotoučové pily</span>
 									<a href="" class="ion-compose" title="Upravit"></a>
-									<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>
+									<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 							</ol>
 						</li>
 						<li><span>Vysavače</span>
 							<a href="" class="ion-compose" title="Upravit"></a>
 							<a href="" class="ion-plus-round" title="Přidat podkategorii"></a>
-							<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>
+							<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 						<li><span>Brusky a drážkovačky</span>
 							<a href="" class="ion-compose" title="Upravit"></a>
 							<a href="" class="ion-plus-round" title="Přidat podkategorii"></a>
-							<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>
+							<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 					</ol>
 				</li>
 				<li><span>Aktuality</span>
 					<a href="" class="ion-compose" title="Upravit"></a>
 					<a href="" class="ion-plus-round" title="Přidat podkategorii"></a>
-					<a href="" class="ion-ios7-trash" title="Odstranit"></a></li>
+					<a href="#remove-category" class="ion-ios7-trash modal"></a></li>
 			</ol>						
         </div>
     </div>
@@ -136,6 +136,16 @@
 		        		<li><input type="submit" value="Uložit"></li>
 		        	</ul>
 				</form>
+        	</div>
+        </div>
+        
+        <div style="display:none">
+        	<div id="remove-category" class="clearfix window"><a href="javascript:$.fancybox.close();" class="close"><i class="ion-close"></i></a>
+        		<h2 class="content-subhead">Opravdu si přejete odstranit tuto kategorii?</h2>
+				    <ul class="buttons">
+		        		<li><input type="submit" value="Ano"></li>
+		        		<li><a href="#">Ne</a></li>
+		        	</ul>
         	</div>
         </div>
 

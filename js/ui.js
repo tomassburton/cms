@@ -49,6 +49,40 @@ $r(document).ready(function() {
 
 }(this, this.document));
 
+var $x = jQuery.noConflict();
+$x(document).ready(function() 
+    { 
+        $("#sort").tablesorter({
+	        headers: {
+		        2: {
+			        sorter: false
+		        },
+		        3: {
+			        sorter: false
+		        },
+		        6: {
+			        sorter: false
+		        },
+		        7: {
+			        sorter: false
+		        },
+		        8: {
+			        sorter: false
+		        },
+		        9: {
+			        sorter: false
+		        }, 
+	        },
+	        sortList: [[0,1]]
+        }); 
+    } 
+);
+
+var $k = jQuery.noConflict();
+$k(document).ready(function(){
+    $("#status").minimalect({ theme: "bubble", placeholder: "Vyberte" });
+});
+
 var $ = jQuery.noConflict();
 $('ul.tabs').each(function(){
   var $active, $content, $links = $(this).find('a');

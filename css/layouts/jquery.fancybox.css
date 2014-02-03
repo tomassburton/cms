@@ -27,6 +27,7 @@
 .window h2 { margin:0!important; }
 .window form { margin-top: 15px; }
 .window .buttons li input { margin: -15px 0 0 0!important; }
+.window .buttons li a { margin-left: 10px!important; }
 .window textarea { width: 400px!important; height: 150px; }
 .window input[type=text] { width: 400px!important; }
 .window label {

@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin-ext);
 @import url('ionicons.css');
+@import url('minimalect.css');
 @import url('jquery.fancybox.css');
 
 body {
@@ -276,6 +277,22 @@ ul.paginator { list-style-type: none; width: 100%; text-align: center; padding: 
 td ul { list-style-type: none; text-align: left; }
 	li i.ion-checkmark-circled { color: rgb(94, 185, 94); }
 	li i.ion-close-circled { color: rgb(221, 81, 76); }
+
+table thead tr .table-header { cursor: pointer; }
+table thead tr .table-header:after {
+	content: " \f20d";
+	font-family: 'Ionicons';
+	cursor: pointer;
+}
+table thead tr .headerSortUp:after {
+	content: " \f10e";
+	font-family: 'Ionicons';
+}
+table thead tr .headerSortDown:after {
+	content: " \f105";
+	font-family: 'Ionicons';
+}
+
 
 /* -- Kategorie --------------------------------------------------------------*/
 ol {font-size: 14px; margin: 0!important;}
