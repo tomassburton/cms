@@ -478,6 +478,95 @@ a.check-all:hover, a.discheck:hover { background: rgba(43, 47, 62, 0.6); }
 		-ms-border-radius: 0px 5px 5px 0px;
 	}
 
+/* -- ALERTS ----------------------------------------------------------------*/
+.alert {
+	border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+	padding: 15px;
+	font-size: 14px;
+	font-family: 'Open Sans'!important;
+	
+	position: absolute;
+	z-index: 10000;
+	top: 20px;
+	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+	display: block;
+	width: 450px;
+	text-align: center;
+	
+	cursor: default;
+}
+	.alert-success a { right: 12px!important; color: rgb(49, 107, 21)!important; }
+	.alert-danger a { right: 12px!important; color: rgb(123, 33, 33)!important; }
+	.alert strong { font-size: 17px; font-weight: 600; display: block; }
+	.alert span { font-size: 14px; }
+
+	.alert-success {
+		background: rgba(145, 226, 106, .9);
+		border: 1px solid rgb(88, 192, 38);
+		color: rgb(49, 107, 21);
+	}
+	.alert-danger {
+		background: rgba(223, 137, 137, .9);
+		border: 1px solid rgb(202, 56, 56);
+		color: rgb(123, 33, 33);
+	}
+
+/* -- NOTIFIKACE -------------------------------------------------------------*/
+.notification-new, .notification-end {
+	border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-o-border-radius: 5px 5px 5px 5px;
+	-ms-border-radius: 5px 5px 5px 5px;
+	padding: 15px;
+	font-size: 14px;
+	font-family: 'Open Sans'!important;
+	
+	position: absolute;
+	z-index: 10000;
+	background: rgba(43, 47, 72, .8);
+	border: 1px solid rgba(43, 37, 72, 1);
+	color: rgb(195, 195, 195);
+	
+	transition: .3s all ease;
+	-webkit-transition: .3s all ease;
+	-moz-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	-ms-transition: .3s all ease;
+}
+.notification-new:hover, .notification-end:hover { color: white; }
+.notification-new:hover .icon { background: rgb(221, 81, 76); }
+.notification-end:hover .icon { background: rgb(250, 210, 50); }
+	.notification-new .icon, .notification-end .icon {
+		margin-top: 10px;
+		border-radius: 50px 50px 50px 50px;
+		padding: 10px;
+		display: inline-block;
+		font-size: 40px;
+		line-height: 40px;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		color: white;
+		float: left;
+		background: rgb(39, 204, 192);
+		transition: .3s all ease;
+		-webkit-transition: .5s all ease;
+		-moz-transition: .5s all ease;
+		-o-transition: .5s all ease;
+		-ms-transition: .5s all ease;
+	}
+	.text { float: right; text-align: left; padding-left: 15px; border-left: 1px solid rgba(195, 195, 195, .3); margin-left: 15px;}
+	.text > strong { font-weight: 600; font-size: 15px; }
+	.text > a { text-decoration: none; color: rgb(195, 195, 195); font-size: 13px; } .text > a:hover { text-decoration: underline; }
+
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 
 /*

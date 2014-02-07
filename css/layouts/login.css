@@ -28,6 +28,29 @@ body {
     background-color: rgb(43, 47, 62);
     color: rgb(85, 89, 101);
 }
+
+.alert-login {
+	border-radius: 0px 8px 8px 0px;
+	padding: 15px;
+	font-size: 14px;
+	font-family: 'Open Sans'!important;
+	position: absolute;
+	z-index: 10000;
+	top: 35%;
+	right: 70%;;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 350px;
+	text-align: center;
+	cursor: default;
+	
+	background: rgb(43, 47, 62);
+	color: rgb(85, 89, 101);	
+}
+	.alert-login strong { font-size: 17px; font-weight: 300; }
+
 .arrow {
 	color: rgb(43, 47, 62);
 	font-size: 25px;
