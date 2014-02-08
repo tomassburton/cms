@@ -519,7 +519,7 @@ a.check-all:hover, a.discheck:hover { background: rgba(43, 47, 62, 0.6); }
 	}
 
 /* -- NOTIFIKACE -------------------------------------------------------------*/
-.notification-new, .notification-end {
+.notification-wrapper {
 	border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	-moz-border-radius: 5px 5px 5px 5px;
@@ -531,39 +531,50 @@ a.check-all:hover, a.discheck:hover { background: rgba(43, 47, 62, 0.6); }
 	
 	position: absolute;
 	z-index: 10000;
-	background: rgba(43, 47, 72, .8);
+	top: 80px;
+	left:0;
+    right:20px;
+    margin-left:auto;
+	display: block;
+	width: 310px;
+	
+	cursor: default;
+	background: rgba(43, 47, 72, .7);
 	border: 1px solid rgba(43, 37, 72, 1);
 	color: rgb(195, 195, 195);
 	
 	transition: .3s all ease;
-	-webkit-transition: .3s all ease;
-	-moz-transition: .3s all ease;
-	-o-transition: .3s all ease;
-	-ms-transition: .3s all ease;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	-o-transition: .5s all ease;
+	-ms-transition: .5s all ease;
 }
-.notification-new:hover, .notification-end:hover { color: white; }
-.notification-new:hover .icon { background: rgb(221, 81, 76); }
-.notification-end:hover .icon { background: rgb(250, 210, 50); }
-	.notification-new .icon, .notification-end .icon {
-		margin-top: 10px;
-		border-radius: 50px 50px 50px 50px;
-		padding: 10px;
-		display: inline-block;
-		font-size: 40px;
-		line-height: 40px;
-		width: 40px;
-		height: 40px;
-		text-align: center;
-		color: white;
-		float: left;
-		background: rgb(39, 204, 192);
-		transition: .3s all ease;
-		-webkit-transition: .5s all ease;
-		-moz-transition: .5s all ease;
-		-o-transition: .5s all ease;
-		-ms-transition: .5s all ease;
-	}
-	.text { float: right; text-align: left; padding-left: 15px; border-left: 1px solid rgba(195, 195, 195, .3); margin-left: 15px;}
+.notification-wrapper:hover { background: rgba(43, 47, 72, .9); }
+.notification { display: inline-block; border-bottom: 1px dashed rgba(195, 195, 195, .3); padding-bottom: 20px; margin-bottom: 15px; width: 100%;}
+.notification:last-of-type { border: none; padding: 0; margin:0; }
+.icon {
+	margin-top: 10px;
+	border-radius: 50px 50px 50px 50px;
+	padding: 10px;
+	display: inline-block;
+	font-size: 40px;
+	line-height: 40px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	color: white;
+	float: left;
+	background: rgba(39, 204, 192, .6);
+	transition: .3s all ease;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	-o-transition: .5s all ease;
+	-ms-transition: .5s all ease;
+}
+.new-one:hover, .end-one:hover { color: white; }
+.new-one:hover .icon { background: rgb(221, 81, 76); }
+.end-one:hover .icon { background: rgb(250, 210, 50); }
+	.text { display:inline-block; text-align: left; padding-left: 15px; border-left: 1px solid rgba(195, 195, 195, .3); margin-left: 15px;}
 	.text > strong { font-weight: 600; font-size: 15px; }
 	.text > a { text-decoration: none; color: rgb(195, 195, 195); font-size: 13px; } .text > a:hover { text-decoration: underline; }
 
